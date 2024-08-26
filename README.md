@@ -1,1 +1,0 @@
-# kukunoichi_stay
