@@ -1,0 +1,27 @@
+$(document).ready(function() {
+    const $window = $(window);
+    const $footer = $('footer');
+    const $airbnbLinksFooter = $('.airbnb-links-footer');
+    const originalParent = $airbnbLinksFooter.parent(); // 元の親要素を保存
+
+    $window.on('scroll', function() {
+        const scrollPosition = $window.scrollTop();
+        const documentHeight = $(document).height();
+        const windowHeight = $window.height();
+
+        // 画面の下までスクロールした場合
+        if (scrollPosition + windowHeight >= documentHeight) {
+            // フッター内に移動
+            if (!$airbnbLinksFooter.parent().is($footer)) {
+                $footer.prepend($airbnbLinksFooter); // フッターの先頭に追加
+                $airbnbLinksFooter.css('bottom', '12px'); // フッター内に移動した際にbottomプロパティをリセット
+            }
+        } else {
+            // 元の位置に戻す場合
+            if ($airbnbLinksFooter.parent().is($footer)) {
+                $airbnbLinksFooter.remove().appendTo(originalParent); // 元の親要素に戻す
+                $airbnbLinksFooter.css('bottom', '0px'); // bottomプロパティを追加
+            }
+        }
+    });
+});
