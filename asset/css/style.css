@@ -993,8 +993,8 @@ display: none;
     .service_accent {
         position: absolute;
         font-size: 1.8em;
-        top: 2%;
-        right: 10%;
+        top: -1%;
+        right: 8%;
     }
     .check {
       display: flex;
