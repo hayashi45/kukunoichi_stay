@@ -993,7 +993,7 @@ display: none;
     .service_accent {
         position: absolute;
         font-size: 1.8em;
-        top: -2%;
+        top: -1%;
         right: 8%;
     }
     .check {
