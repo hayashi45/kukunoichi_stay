@@ -1,0 +1,28 @@
+$(document).ready(function() {
+    const $banner = $('#banner');
+    const $window = $(window);
+
+    $window.on('scroll', function() {
+        const scrollPosition = $window.scrollTop();
+        const windowHeight = $window.height();
+
+        // バナーのフェードイン/フェードアウト処理
+        if (scrollPosition > 100) {
+            if (!$banner.is(':visible')) {
+                $banner.fadeIn();
+            }
+        } else {
+            if ($banner.is(':visible')) {
+                $banner.fadeOut();
+            }
+        }
+
+        // fadein要素のスクロールアニメーション処理
+        $('.fadein').each(function() {
+            var elemPos = $(this).offset().top;
+            if (scrollPosition > elemPos - windowHeight + 200) {
+                $(this).addClass('scrollin');
+            }
+        });
+    });
+});
