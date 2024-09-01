@@ -134,6 +134,21 @@ header{
   overflow: hidden;
 }
 
+.fadeinFV {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
 #FV {
   background-image: url(../img/FV_1920_ph.png);
   background-repeat: no-repeat;
@@ -147,7 +162,7 @@ header{
 .fv_brash{
   position: absolute;
   width: 60%;
-  bottom: -9%;
+  bottom: -1%;
   right: 0;
   z-index: -10;
 }
@@ -820,7 +835,7 @@ display: none;
         transform: translateX(100%);
         transition: transform 0.3s ease;
         justify-content: space-between;
-        opacity: 0;
+        opacity: 1;
         visibility: hidden;
         z-index: 15;
     }
@@ -848,7 +863,7 @@ display: none;
         flex-direction: column;
         align-items: center;
         padding: 0 2%;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 48px);
         transform: translateX(0%);
         opacity: 1;
         visibility: visible;
@@ -1387,7 +1402,7 @@ button:hover {
       display: block;
       position: absolute;
       width: 60%;
-      bottom: -9%;
+      bottom: -6%;
       right: 0;
       z-index: -10;
       }
