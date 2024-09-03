@@ -157,6 +157,7 @@ header{
   height: 640px;
   margin-top: 0;
   position: relative;
+  
 }
 
 .fv_brash{
@@ -178,7 +179,7 @@ header{
     height: 48px;
     width: 48px;
     border-radius: 0% 0% 0% 20%;
-    z-index: 10;
+    z-index: 1000 !important;
     display: none;
 }
 
@@ -419,6 +420,7 @@ overflow: hidden;
     padding-top: 4%;
     margin: 16px 0;
     position: relative;
+    z-index: 10!important;
 }
 
 .service_ph {
@@ -489,6 +491,7 @@ overflow: hidden;
 .service_slider {
   overflow: hidden;
   position: relative;
+  z-index: 10!important;
 }
 
 .service_card {
@@ -504,13 +507,10 @@ overflow: hidden;
   max-width: 720px;
   flex-direction: column;
   align-items: center;
-  z-index: -20;
-
 }
 
 .service_ill_01,.service_ill_02,.service_ill_03,.service_ill_04,.service_ill_05,.service_ill_06{
 width: 30%;
-z-index: -10;
 }
 
 .service_ill_01{
@@ -521,7 +521,6 @@ z-index: -10;
 .service_ill_02{
   position: absolute;
   right: 0%;
-  z-index: 10;
   top: -50%;
   width: 15%;
 }
@@ -537,7 +536,6 @@ z-index: -10;
   bottom: 0;
   right: -12%;
   width: 24%;
-  z-index: 10;
 }
 
 .service_ill_05 {
@@ -767,7 +765,9 @@ button:hover {
 
 /* モバイルビュー */
 @media (max-width: 768px) {
-
+ .main-content{
+  position: relative;
+ }
   .prev {
     left: 10px;
     display: none;
@@ -817,7 +817,8 @@ display: none;
   }
     #burgerBG, .nav-logo {
         display: block;
-        z-index: 20;
+        position: fixed;
+        z-index: 9999!important;
     }
 
     #nav-list {
@@ -1031,21 +1032,17 @@ display: none;
       }
       .service_ill_02{
         position: absolute;
-        z-index: 10;
         right: -12%;
         top: -24%;
     }
       
       .service_ill_03{
         position: absolute;
-        z-index: -10;
     
     }
       
       
       .service_ill_04{
-        z-index: -10;
-        opacity: 0.6;
           position: absolute;
           top: 57%;
           right: -12%;
@@ -1055,8 +1052,6 @@ display: none;
         position: absolute;
         top: -70px;
         left: -2%;
-        z-index: -10;
-        opacity: 0.6;
       }
 
      .service_ill_06{
@@ -1270,7 +1265,6 @@ h1 > img {
 
   .service_ill_03 {
    position: absolute;
-        z-index: -10;
         left: -2%;
         top: 150%;
   }
@@ -1279,14 +1273,11 @@ h1 > img {
     position: absolute;
     top: 57%;
     right: -12%;
-    z-index: -10;
 }
 .service_ill_05 {
     position: absolute;
     top: -76px;
     left: -2%;
-    z-index: -10;
-    opacity: 0.6;
 }
 .service_slider {
   width: 100%;
