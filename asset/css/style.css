@@ -811,13 +811,16 @@ display: none;
 .site_title > h1 > p{
   font-size: 14px;
 }
-
+    section {
+      position: relative;
+      z-index:-10;
+  }
     section:first-child {
       margin: 0%;
   }
     #burgerBG, .nav-logo {
-        display: block;
-        position: fixed;
+        display: block!important;
+        position: fixed!important;
         z-index: 9999!important;
     }
 
@@ -938,6 +941,8 @@ display: none;
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
+          position: relative;
+          z-index:-10;
     }
 
     .service_title {
